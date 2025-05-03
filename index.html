@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bday</title>
+    <link rel="stylesheet" href="Bday.css">
+</head>
+<body>
+    <!-- <div class="logo">
+        <img src="/Background.jpg" alt="">
+    </div> -->
+    <!-- <img src="Background.jpg" alt=""> -->
+
+    <div class="Balloon">
+        <img src="/Alyan/javascr/Balloon.png" alt="Error">
+    </div>
+    
+    
+    <div class="container" id="both" style="display: none;">
+        
+        <div class="text" id="Btext">
+        <h1>Happy Birthday My love</h1>
+        <h2>The world just got luckier since</h2>
+        <h2>10,593 days ago</h2>
+
+        
+    </div>
+    
+    <div class="image" id="pic" >
+        <img src="/Alyan/javascr/Mda.jpg" alt="network issue">
+    </div>
+
+</div>
+<div class="btn">
+    <button id="showText" onclick="clickEvent()"><img src="heart2.webp" alt=""></button>
+</div>
+<button class="buky" id="roseBuky" onclick="roseFun()">click me</button>
+<div class="rose-button" id="bukyBtn" style="display: none;">
+    <!-- <p>Heyy.. Beautiful don't forget to take your buky</p> -->
+    <img src="/Alyan/javascr/buky.avif" alt="">
+</div>
+
+<audio controls id="audio" class="song">
+    <source src="/Alyan/javascr/song.mp3" type="audio/mpeg">
+  </audio>
+
+
+<script>
+   const showText = document.getElementById("showText");
+const Btext = document.getElementById("Btext");
+const pic = document.getElementById("pic");
+const both = document.getElementById("both");
+const audio = document.getElementById("audio");
+const roseBuky = document.getElementById("roseBuky");
+const bukyBtn = document.getElementById("bukyBtn"); 
+
+function clickEvent() {
+    if (
+  both.style.display === 'none' && audio.play()
+
+) {
+  both.style.display = 'block';
+  
+ 
+  console.log("working");
+
+  confetti({
+      particleCount: 1200,
+      spread: 120,
+      origin: { y: 0.6 }
+    });
+  
+} else {
+  both.style.display = 'none';
+  audio.pause()
+  console.log("result");
+}
+}
+
+function roseFun(){
+    if (bukyBtn.style.display === 'none'){
+        bukyBtn.style.display = 'block';
+    } else {
+        bukyBtn.style.display = 'block'
+    }
+}
+    
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
